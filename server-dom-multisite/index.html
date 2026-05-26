@@ -1,0 +1,573 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#050816" />
+  <meta name="description" content="СЕРВЕР-ДОМ — продажа, настройка и кастомная сборка серверного оборудования под виртуализацию, AI, storage, edge и enterprise-нагрузки. SLA 24/7, гарантия, доставка." />
+  <meta name="keywords" content="серверы, серверное оборудование, GPU сервер, 1U, 2U, СХД, кастомная сборка серверов, SLA, дата-центр" />
+  <meta property="og:title" content="СЕРВЕР-ДОМ — серверы под ваши нагрузки" />
+  <meta property="og:description" content="Подберем, соберем и настроим серверную инфраструктуру под бизнес-задачи. От 1U до AI-кластеров." />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="assets/og-server-preview.svg" />
+  <title>СЕРВЕР-ДОМ — продажа и кастомная сборка серверов</title>
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "СЕРВЕР-ДОМ",
+    "url": "https://server-dom.ru",
+    "logo": "https://server-dom.ru/logo.svg",
+    "description": "Продажа, настройка и кастомная сборка серверного оборудования",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Москва",
+      "streetAddress": "Пресненская наб., 12"
+    },
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "telephone": "+7-495-000-00-00",
+      "contactType": "sales",
+      "availableLanguage": ["Russian", "English"],
+      "areaServed": "RU"
+    },
+    "sameAs": ["https://t.me/serverdom", "https://vk.com/serverdom"]
+  }
+  </script>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <a class="skip-link" href="#main">Перейти к содержимому</a>
+  <canvas id="neuralCanvas" aria-hidden="true"></canvas>
+  <div class="ambient" aria-hidden="true">
+    <span class="orb orb-a"></span>
+    <span class="orb orb-b"></span>
+    <span class="orb orb-c"></span>
+  </div>
+  <div class="noise" aria-hidden="true"></div>
+  <div class="cursor-glow" aria-hidden="true"></div>
+
+  <header class="site-header" data-header>
+    <div class="header-top">
+      <div class="container header-top-inner">
+        <div class="top-contacts" aria-label="Контактная информация">
+          <a href="tel:+74950000000">+7 495 000-00-00</a>
+          <a href="mailto:sales@server-dom.ru">sales@server-dom.ru</a>
+        </div>
+        <a class="top-request magnetic" href="#contacts">Оставить заявку</a>
+      </div>
+    </div>
+    <nav class="nav container" aria-label="Основная навигация">
+      <a class="brand magnetic" href="index.html" aria-label="СЕРВЕР-ДОМ — на главную">
+        <span class="brand-mark">
+          <svg viewBox="0 0 40 40" role="img" aria-label="Логотип СЕРВЕР-ДОМ">
+            <path d="M20 3 34.7 11.5v17L20 37 5.3 28.5v-17L20 3Z" fill="none" stroke="currentColor" stroke-width="2"/>
+            <path d="M13 14h14v4H13zM13 22h14v4H13z" fill="currentColor"/>
+            <circle cx="29" cy="16" r="1.4" fill="#b8ff2c"/>
+            <circle cx="29" cy="24" r="1.4" fill="#22d3ee"/>
+          </svg>
+        </span>
+        <span>СЕРВЕР-<span>ДОМ</span></span>
+      </a>
+      <button class="nav-toggle" type="button" aria-label="Открыть меню" aria-expanded="false" data-nav-toggle>
+        <span></span><span></span><span></span>
+      </button>
+      <div class="nav-panel" data-nav-panel>
+        <a href="catalog.html">Каталог</a>
+        <a href="delivery.html">Доставка</a>
+        <a href="about.html">О нас</a>
+        <a href="#contacts">Контакты</a>
+        <a class="messenger-btn telegram" href="https://t.me/serverdom" target="_blank" rel="noopener">Написать в Телеграмм</a>
+        <a class="messenger-btn max" href="https://max.ru/serverdom" target="_blank" rel="noopener">Написать в МАКС</a>
+      </div>
+    </nav>
+  </header>
+
+  <main id="main">
+    <!-- 1. Hero -->
+    <section id="hero" class="hero section" aria-labelledby="hero-title">
+      <div class="container hero-grid">
+        <div class="hero-copy">
+          <div class="eyebrow reveal" data-reveal>
+            <span class="pulse-dot"></span>
+            Enterprise hardware • AI-ready • SLA 24/7
+          </div>
+          <h1 id="hero-title" class="hero-title reveal" data-reveal>
+            <span class="gradient-text">Готовые серверы</span>
+          </h1>
+          <p class="hero-subtitle reveal" data-reveal>
+            Серверы в наличии и под заказ: 1U/2U, GPU/AI, СХД и кастомные конфигурации.
+            Подберем железо под вашу нагрузку, подготовим КП и организуем доставку до офиса или ЦОДа.
+          </p>
+          <div class="order-flow reveal" data-reveal aria-label="Как оформляется заказ">
+            <h2>Как оформляется заказ</h2>
+            <div class="order-flow-grid">
+              <span><b>01</b>Заявка или звонок</span>
+              <span><b>02</b>Подбор конфигурации</span>
+              <span><b>03</b>КП и согласование</span>
+              <span><b>04</b>Сборка, тесты и доставка</span>
+            </div>
+          </div>
+          <div class="hero-actions reveal" data-reveal>
+            <a class="btn btn-ghost magnetic" href="tel:+74950000000">Позвонить</a>
+            <a class="btn btn-primary magnetic" href="#contacts">
+              <span>Оставить заявку</span>
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h12m0 0-5-5m5 5-5 5"/></svg>
+            </a>
+            <a class="btn btn-telegram magnetic" href="https://t.me/serverdom" target="_blank" rel="noopener">Написать в Телеграмм</a>
+            <a class="btn btn-max magnetic" href="https://max.ru/serverdom" target="_blank" rel="noopener">Написать в МАКС</a>
+          </div>
+          <div class="hero-metrics reveal" data-reveal>
+            <div><strong>48 ч</strong><span>на первичный расчет</span></div>
+            <div><strong>99.99%</strong><span>целевой uptime</span></div>
+            <div><strong>0→Rack</strong><span>сборка под ключ</span></div>
+          </div>
+        </div>
+
+        <div class="hero-visual reveal" data-reveal aria-label="Анимированный серверный модуль">
+          <div class="holo-platform">
+            <div class="scan-line"></div>
+            <div class="server-stack real-server" data-tilt>
+              <div class="rack-server-model" aria-hidden="true">
+                <div class="rack-rail rail-left"></div>
+                <div class="rack-rail rail-right"></div>
+                <div class="server-body-3d">
+                  <div class="server-top-face">
+                    <span class="top-rib"></span><span class="top-rib"></span><span class="top-rib"></span>
+                  </div>
+                  <div class="server-right-face">
+                    <span></span><span></span><span></span><span></span>
+                  </div>
+                  <div class="server-front-face">
+                    <div class="rack-ear left-ear"><i></i><i></i><b></b></div>
+                    <div class="rack-ear right-ear"><i></i><i></i><b></b></div>
+                    <div class="server-label">
+                      <strong>СЕРВЕР-ДОМ R2U</strong>
+                      <small>Enterprise Rack Server</small>
+                    </div>
+                    <div class="drive-array">
+                      <span class="drive-bay"><i></i><em></em></span>
+                      <span class="drive-bay"><i></i><em></em></span>
+                      <span class="drive-bay"><i></i><em></em></span>
+                      <span class="drive-bay"><i></i><em></em></span>
+                      <span class="drive-bay"><i></i><em></em></span>
+                      <span class="drive-bay"><i></i><em></em></span>
+                      <span class="drive-bay"><i></i><em></em></span>
+                      <span class="drive-bay"><i></i><em></em></span>
+                      <span class="drive-bay"><i></i><em></em></span>
+                      <span class="drive-bay"><i></i><em></em></span>
+                      <span class="drive-bay"><i></i><em></em></span>
+                      <span class="drive-bay"><i></i><em></em></span>
+                    </div>
+                    <div class="control-zone">
+                      <div class="status-leds"><i></i><i></i><i></i></div>
+                      <div class="usb-port"></div>
+                      <div class="usb-port small"></div>
+                      <div class="power-button"></div>
+                    </div>
+                    <div class="fan-mesh"><i></i><i></i><i></i><i></i><i></i><i></i></div>
+                  </div>
+                </div>
+                <div class="server-shadow-3d"></div>
+                <span class="data-beam beam-a"></span>
+                <span class="data-beam beam-b"></span>
+                <span class="data-beam beam-c"></span>
+              </div>
+            </div>
+            <svg class="orbit orbit-1" viewBox="0 0 520 520" aria-hidden="true">
+              <ellipse cx="260" cy="260" rx="220" ry="92"/>
+            </svg>
+            <svg class="orbit orbit-2" viewBox="0 0 520 520" aria-hidden="true">
+              <ellipse cx="260" cy="260" rx="168" ry="238"/>
+            </svg>
+            <div class="floating-chip chip-a">Xeon / EPYC</div>
+            <div class="floating-chip chip-b">NVMe Gen5</div>
+            <div class="floating-chip chip-c">GPU x8</div>
+          </div>
+        </div>
+      </div>
+      <div class="scroll-cue" aria-hidden="true">
+        <span></span>
+        Scroll
+      </div>
+    </section>
+
+    <!-- 2. Advantages -->
+    <section id="advantages" class="section advantages" aria-labelledby="advantages-title">
+      <div class="container">
+        <div class="section-head reveal" data-reveal>
+          <p class="section-kicker">Почему СЕРВЕР-ДОМ</p>
+          <h2 id="advantages-title">Инфраструктура без компромиссов</h2>
+          <p>От точного сайзинга до стресс-тестов и документированной передачи в эксплуатацию.</p>
+        </div>
+        <div class="adv-grid stagger" data-stagger>
+          <article class="glass-card adv-card" data-tilt>
+            <div class="icon-3d shield"><span></span></div>
+            <h3>Надежность enterprise</h3>
+            <p>Подбираем компоненты с запасом по питанию, охлаждению и отказоустойчивости.</p>
+          </article>
+          <article class="glass-card adv-card" data-tilt>
+            <div class="icon-3d cubes"><span></span></div>
+            <h3>Кастомная сборка</h3>
+            <p>Собираем серверы под ваши приложения, лицензии, стойки и ограничения ЦОДа.</p>
+          </article>
+          <article class="glass-card adv-card" data-tilt>
+            <div class="icon-3d clock"><span></span></div>
+            <h3>SLA 24/7</h3>
+            <p>Поддержка, диагностика, замена комплектующих и регламенты реагирования.</p>
+          </article>
+          <article class="glass-card adv-card" data-tilt>
+            <div class="icon-3d tune"><span></span></div>
+            <h3>Оптимизация под задачи</h3>
+            <p>Баланс CPU, RAM, IOPS, GPU и сети — без переплаты за лишние спецификации.</p>
+          </article>
+          <article class="glass-card adv-card" data-tilt>
+            <div class="icon-3d warranty"><span></span></div>
+            <h3>Гарантия и тесты</h3>
+            <p>Burn-in тестирование, паспорт конфигурации, серийные номера и прозрачные сроки.</p>
+          </article>
+          <article class="glass-card adv-card" data-tilt>
+            <div class="icon-3d delivery"><span></span></div>
+            <h3>Доставка до стойки</h3>
+            <p>Комплектация, маркировка, монтажные рельсы, упаковка и логистика по РФ/СНГ.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Cinematic section -->
+    <section class="section cinematic" aria-labelledby="cinematic-title">
+      <div class="container cinematic-wrap">
+        <div class="cinematic-copy">
+          <p class="section-kicker reveal" data-reveal>Сценарии внедрения</p>
+          <h2 id="cinematic-title" class="reveal" data-reveal>Собираем железо под реальный профиль нагрузки</h2>
+          <div class="timeline">
+            <article class="timeline-item reveal" data-reveal data-stage="0">
+              <span>01</span>
+              <h3>Профилируем workload</h3>
+              <p>Считаем CPU ready, RAM overcommit, IOPS, сетевые пики и требования к отказоустойчивости.</p>
+            </article>
+            <article class="timeline-item reveal" data-reveal data-stage="1">
+              <span>02</span>
+              <h3>Собираем спецификацию</h3>
+              <p>Подбираем платформу, процессоры, память, дисковую подсистему, RAID/HBA и NIC.</p>
+            </article>
+            <article class="timeline-item reveal" data-reveal data-stage="2">
+              <span>03</span>
+              <h3>Тестируем и передаем</h3>
+              <p>Проводим стресс-тест, обновляем firmware, готовим комплект документов и рекомендации.</p>
+            </article>
+          </div>
+        </div>
+        <div class="cinematic-sticky" aria-hidden="true">
+          <div class="rack-sculpture" data-rack-sculpture>
+            <div class="rack-layer l1"></div>
+            <div class="rack-layer l2"></div>
+            <div class="rack-layer l3"></div>
+            <div class="rack-layer l4"></div>
+            <div class="energy-ring"></div>
+            <div class="status-panel">
+              <b>Load profile</b>
+              <span><i style="--w:82%"></i></span>
+              <span><i style="--w:64%"></i></span>
+              <span><i style="--w:93%"></i></span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 3. Catalog preview -->
+    <section id="catalog" class="section catalog" aria-labelledby="catalog-title">
+      <div class="container">
+        <div class="section-head reveal" data-reveal>
+          <p class="section-kicker">Каталог решений</p>
+          <h2 id="catalog-title">Готовые платформы — кастом внутри</h2>
+          <p>Каждая карточка — стартовая конфигурация. Финальные параметры адаптируем под задачу, бюджет и сроки.</p>
+        </div>
+        <div class="solutions-grid stagger" data-stagger>
+          <article class="solution-card glass-card" data-tilt>
+            <div class="solution-top">
+              <span class="solution-badge">1U / 2U</span>
+              <div class="mini-server" aria-hidden="true"><i></i><i></i><i></i></div>
+            </div>
+            <h3>Rack-серверы для виртуализации</h3>
+            <ul>
+              <li>1–2 CPU Intel Xeon / AMD EPYC</li>
+              <li>до 4 ТБ DDR5 ECC</li>
+              <li>10/25/100G сеть, RAID/HBA</li>
+            </ul>
+            <a class="card-link" href="catalog.html">Смотреть в каталоге</a>
+          </article>
+          <article class="solution-card glass-card featured" data-tilt>
+            <div class="solution-top">
+              <span class="solution-badge">GPU / AI</span>
+              <div class="mini-gpu" aria-hidden="true"><i></i><i></i><i></i></div>
+            </div>
+            <h3>GPU-серверы для AI и HPC</h3>
+            <ul>
+              <li>до 8 GPU, NVLink/PCIe</li>
+              <li>питание 2–4 кВт, liquid-ready</li>
+              <li>ML, render, inference, LLM</li>
+            </ul>
+            <a class="card-link" href="catalog.html">Смотреть в каталоге</a>
+          </article>
+          <article class="solution-card glass-card" data-tilt>
+            <div class="solution-top">
+              <span class="solution-badge">Storage</span>
+              <div class="mini-storage" aria-hidden="true"><i></i><i></i><i></i></div>
+            </div>
+            <h3>Системы хранения и бэкапа</h3>
+            <ul>
+              <li>NVMe/SAS/SATA полки</li>
+              <li>ZFS, Ceph, object storage</li>
+              <li>снапшоты, репликация, WORM</li>
+            </ul>
+            <a class="card-link" href="catalog.html">Смотреть в каталоге</a>
+          </article>
+          <article class="solution-card glass-card" data-tilt>
+            <div class="solution-top">
+              <span class="solution-badge">Edge</span>
+              <div class="mini-edge" aria-hidden="true"><i></i><i></i><i></i></div>
+            </div>
+            <h3>Edge-серверы для филиалов</h3>
+            <ul>
+              <li>компактные и защищенные шасси</li>
+              <li>низкое энергопотребление</li>
+              <li>локальная обработка данных</li>
+            </ul>
+            <a class="card-link" href="catalog.html">Смотреть в каталоге</a>
+          </article>
+          <article class="solution-card glass-card wide" data-tilt>
+            <div class="solution-top">
+              <span class="solution-badge">Custom Lab</span>
+              <div class="mini-custom" aria-hidden="true"><i></i><i></i><i></i></div>
+            </div>
+            <h3>Кастомные сборки и кластеры</h3>
+            <ul>
+              <li>Proxmox / VMware / Hyper-V / Kubernetes</li>
+              <li>HA-кластеры, сети, rack layout</li>
+              <li>нестандартные требования по шуму, габаритам и охлаждению</li>
+            </ul>
+            <a class="card-link" href="catalog.html">Смотреть в каталоге</a>
+          </article>
+        </div>
+        <div class="section-more reveal" data-reveal>
+          <a class="btn btn-primary magnetic" href="catalog.html">Смотреть весь каталог с ценами</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- 4. Configurator -->
+    <section id="configurator" class="section configurator" aria-labelledby="configurator-title">
+      <div class="container config-grid">
+        <div class="config-copy reveal" data-reveal>
+          <p class="section-kicker">Интерактивный подбор</p>
+          <h2 id="configurator-title">Соберите базовую спецификацию за минуту</h2>
+          <p>Ответьте на 5 вопросов — покажем ориентировочный класс решения и бюджет. Финальное КП подготовит инженер.</p>
+          <div class="tooltip-line">
+            <span class="tooltip" data-tooltip="Цена зависит от наличия компонентов, валюты, гарантийного пакета и сроков поставки.">Как считается бюджет?</span>
+          </div>
+        </div>
+        <div class="config-panel glass-card reveal" data-reveal>
+          <div class="progressbar" aria-hidden="true"><span data-config-progress></span></div>
+          <form id="serverConfigForm" class="config-form">
+            <fieldset class="config-step active" data-step="0">
+              <legend>1. Основная задача</legend>
+              <div class="option-grid">
+                <label><input type="radio" name="task" value="virtualization" data-price="420000" checked><span>Виртуализация</span></label>
+                <label><input type="radio" name="task" value="ai" data-price="1200000"><span>AI / GPU</span></label>
+                <label><input type="radio" name="task" value="storage" data-price="760000"><span>СХД / Backup</span></label>
+                <label><input type="radio" name="task" value="edge" data-price="260000"><span>Edge / филиал</span></label>
+              </div>
+            </fieldset>
+            <fieldset class="config-step" data-step="1">
+              <legend>2. Процессорная платформа</legend>
+              <div class="option-grid">
+                <label><input type="radio" name="cpu" value="single" data-price="0" checked><span>1 CPU, balanced</span></label>
+                <label><input type="radio" name="cpu" value="dual" data-price="240000"><span>2 CPU, enterprise</span></label>
+                <label><input type="radio" name="cpu" value="epyc" data-price="390000"><span>AMD EPYC high-core</span></label>
+                <label><input type="radio" name="cpu" value="gpu-ready" data-price="520000"><span>GPU-ready платформа</span></label>
+              </div>
+            </fieldset>
+            <fieldset class="config-step" data-step="2">
+              <legend>3. Память ECC</legend>
+              <div class="range-card">
+                <input type="range" name="ram" min="128" max="2048" step="128" value="512" data-range="ram" />
+                <div><strong><span data-ram-value>512</span> ГБ</strong><small>DDR5 ECC RDIMM</small></div>
+              </div>
+            </fieldset>
+            <fieldset class="config-step" data-step="3">
+              <legend>4. Хранилище</legend>
+              <div class="option-grid">
+                <label><input type="radio" name="storage" value="ssd" data-price="120000" checked><span>SSD SATA, RAID</span></label>
+                <label><input type="radio" name="storage" value="nvme" data-price="320000"><span>NVMe Gen4/5</span></label>
+                <label><input type="radio" name="storage" value="hybrid" data-price="260000"><span>Hybrid SSD + HDD</span></label>
+                <label><input type="radio" name="storage" value="san" data-price="680000"><span>СХД / JBOD</span></label>
+              </div>
+            </fieldset>
+            <fieldset class="config-step" data-step="4">
+              <legend>5. Охлаждение и сервис</legend>
+              <div class="option-grid">
+                <label><input type="radio" name="cooling" value="standard" data-price="0" checked><span>Standard airflow</span></label>
+                <label><input type="radio" name="cooling" value="quiet" data-price="85000"><span>Low-noise</span></label>
+                <label><input type="radio" name="cooling" value="redundant" data-price="160000"><span>Redundant + SLA</span></label>
+                <label><input type="radio" name="cooling" value="liquid" data-price="410000"><span>Liquid-ready</span></label>
+              </div>
+            </fieldset>
+            <div class="config-result" aria-live="polite">
+              <span>Ориентир бюджета</span>
+              <strong data-estimate>от 1 092 000 ₽</strong>
+              <small data-recommendation>Balanced 2U для виртуализации и баз данных.</small>
+            </div>
+            <div class="config-actions">
+              <button class="btn btn-ghost" type="button" data-prev-step>Назад</button>
+              <button class="btn btn-primary" type="button" data-next-step>Дальше</button>
+              <a class="btn btn-lime" href="#contacts" data-config-request>Отправить заявку</a>
+            </div>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <!-- 5. Cases -->
+    <section id="cases" class="section cases" aria-labelledby="cases-title">
+      <div class="container">
+        <div class="section-head reveal" data-reveal>
+          <p class="section-kicker">Кейсы и цифры</p>
+          <h2 id="cases-title">Мы говорим на языке uptime, latency и TCO</h2>
+        </div>
+        <div class="stats-grid stagger" data-stagger>
+          <div class="stat-card glass-card"><strong data-counter="1280">0</strong><span>серверов поставлено</span></div>
+          <div class="stat-card glass-card"><strong data-counter="11">0</strong><span>лет на рынке</span></div>
+          <div class="stat-card glass-card"><strong data-counter="99.99" data-suffix="%">0</strong><span>целевой uptime</span></div>
+          <div class="stat-card glass-card"><strong data-counter="340">0</strong><span>клиентов B2B</span></div>
+        </div>
+        <div class="case-grid">
+          <article class="case-card glass-card reveal" data-reveal>
+            <span>FinTech</span>
+            <h3>Кластер виртуализации для платежной платформы</h3>
+            <p>6 узлов 2U, all-flash NVMe, 25G сеть, отказоустойчивый storage. Снижение latency на 37%.</p>
+          </article>
+          <article class="case-card glass-card reveal" data-reveal>
+            <span>AI Lab</span>
+            <h3>GPU-ферма для обучения моделей компьютерного зрения</h3>
+            <p>4 сервера по 8 GPU, оптимизация питания и airflow. Рост throughput пайплайна в 3.4 раза.</p>
+          </article>
+          <article class="case-card glass-card reveal" data-reveal>
+            <span>Retail</span>
+            <h3>Edge-узлы для 120 магазинов</h3>
+            <p>Компактные серверы для локальной аналитики, касс и видеонаблюдения с удаленным мониторингом.</p>
+          </article>
+        </div>
+        <div class="partners reveal" data-reveal aria-label="Логотипы партнеров">
+          <span>Intel</span><span>AMD</span><span>NVIDIA</span><span>Supermicro</span><span>Micron</span><span>Broadcom</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="section faq" aria-labelledby="faq-title">
+      <div class="container faq-grid">
+        <div class="reveal" data-reveal>
+          <p class="section-kicker">FAQ</p>
+          <h2 id="faq-title">Частые вопросы перед закупкой</h2>
+        </div>
+        <div class="accordion reveal" data-reveal>
+          <details open>
+            <summary>Можно ли собрать сервер под уже купленные лицензии?</summary>
+            <p>Да. Учитываем требования VMware, Microsoft, Veeam, СУБД и других продуктов: сокеты, ядра, RAM, storage и совместимость HCL.</p>
+          </details>
+          <details>
+            <summary>Вы помогаете с миграцией?</summary>
+            <p>Можем подготовить план миграции, развернуть гипервизор, настроить сети, storage, мониторинг и выполнить перенос по согласованному окну.</p>
+          </details>
+          <details>
+            <summary>Как быстро можно получить КП?</summary>
+            <p>Типовой расчет — до 48 часов. Для сложных GPU/СХД-проектов может потребоваться техническое интервью и уточнение нагрузок.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contacts -->
+    <section id="contacts" class="section contacts" aria-labelledby="contacts-title">
+      <div class="container contact-grid">
+        <div class="contact-info reveal" data-reveal>
+          <p class="section-kicker">Контакты</p>
+          <h2 id="contacts-title">Запросите расчет серверной конфигурации</h2>
+          <p>Опишите задачу — инженер свяжется с вами, уточнит нагрузку и подготовит спецификацию.</p>
+          <div class="contact-cards">
+            <a class="contact-card glass-card" href="tel:+74950000000">
+              <span>Телефон</span><strong>+7 495 000-00-00</strong>
+            </a>
+            <a class="contact-card glass-card" href="mailto:sales@server-dom.ru">
+              <span>Email</span><strong>sales@server-dom.ru</strong>
+            </a>
+            <div class="contact-card glass-card">
+              <span>Адрес</span><strong>Москва, Пресненская наб., 12</strong>
+            </div>
+          </div>
+          <div class="map-card glass-card" aria-label="Схематичная карта офиса">
+            <svg viewBox="0 0 680 300" role="img" aria-label="Карта: Москва, Пресненская набережная">
+              <defs>
+                <linearGradient id="mapLine" x1="0" x2="1">
+                  <stop stop-color="#22d3ee"/><stop offset="1" stop-color="#a855f7"/>
+                </linearGradient>
+              </defs>
+              <rect width="680" height="300" rx="24" fill="#071124"/>
+              <path d="M0 210 C120 170 170 245 280 195 S460 130 680 178" stroke="url(#mapLine)" stroke-width="16" fill="none" opacity=".65"/>
+              <path d="M60 62h170M96 92h180M385 45h180M412 83h132M120 252h180M425 238h180" stroke="#263855" stroke-width="3"/>
+              <circle cx="358" cy="158" r="22" fill="#b8ff2c" opacity=".18"/>
+              <circle cx="358" cy="158" r="10" fill="#b8ff2c"/>
+              <text x="382" y="164" fill="#ecfeff" font-size="18" font-family="Arial">СЕРВЕР-ДОМ</text>
+            </svg>
+          </div>
+        </div>
+        <form id="leadForm" class="lead-form glass-card reveal" data-reveal>
+          <input class="hp-field" type="text" name="website" tabindex="-1" autocomplete="off" aria-hidden="true" />
+          <div class="form-grid">
+            <label>Имя<input required name="name" autocomplete="name" placeholder="Алексей" /></label>
+            <label>Компания<input name="company" autocomplete="organization" placeholder="ООО «Инфра»" /></label>
+            <label>Email<input required type="email" name="email" autocomplete="email" placeholder="you@company.ru" /></label>
+            <label>Телефон<input required type="tel" name="phone" autocomplete="tel" placeholder="+7 ..." /></label>
+          </div>
+          <label>Комментарий<textarea name="comment" rows="5" placeholder="Например: нужен 2U сервер под 20 VM, 512 ГБ RAM, NVMe, 10G сеть..."></textarea></label>
+          <label class="checkbox"><input required type="checkbox" name="privacy" /> <span>Согласен на обработку персональных данных и политику конфиденциальности</span></label>
+          <button class="btn btn-primary" type="submit">Отправить заявку</button>
+          <p class="form-status" data-form-status role="status" aria-live="polite"></p>
+          <div class="socials" aria-label="Социальные сети">
+            <a href="https://t.me/serverdom" target="_blank" rel="noopener">Телеграмм</a>
+            <a href="https://max.ru/serverdom" target="_blank" rel="noopener">МАКС</a>
+            <a href="https://vk.com/serverdom" target="_blank" rel="noopener">VK</a>
+          </div>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-grid">
+      <a class="brand" href="index.html">
+        <span class="brand-mark">
+          <svg viewBox="0 0 40 40" aria-hidden="true"><path d="M20 3 34.7 11.5v17L20 37 5.3 28.5v-17L20 3Z" fill="none" stroke="currentColor" stroke-width="2"/><path d="M13 14h14v4H13zM13 22h14v4H13z" fill="currentColor"/></svg>
+        </span>
+        <span>СЕРВЕР-<span>ДОМ</span></span>
+      </a>
+      <nav aria-label="Навигация футера">
+        <a href="catalog.html">Каталог</a>
+        <a href="delivery.html">Доставка</a>
+        <a href="about.html">О нас</a>
+        <a href="#contacts">Контакты</a>
+      </nav>
+      <div class="footer-meta">
+        <p>© <span data-year></span> СЕРВЕР-ДОМ. Все права защищены.</p>
+        <a href="#" aria-label="Политика конфиденциальности">Политика конфиденциальности</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="620" viewBox="0 0 900 620" role="img" aria-label="R2U PRO сервер">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#081124"/><stop offset="1" stop-color="#030712"/></linearGradient>
+    <linearGradient id="n" x1="0" x2="1"><stop stop-color="#67e8f9"/><stop offset="1" stop-color="#b8ff2c"/></linearGradient>
+    <filter id="glow"><feGaussianBlur stdDeviation="10" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+  </defs>
+  <rect width="900" height="620" rx="42" fill="url(#bg)"/>
+  <g opacity=".18" stroke="#67e8f9"><path d="M0 120h900M0 220h900M0 320h900M0 420h900M0 520h900"/><path d="M90 0v620M190 0v620M290 0v620M390 0v620M490 0v620M590 0v620M690 0v620M790 0v620"/></g>
+  <ellipse cx="455" cy="468" rx="305" ry="58" fill="#67e8f9" opacity=".13" filter="url(#glow)"/>
+  <g transform="translate(145 220) skewY(-7)" filter="url(#glow)">
+    <path d="M35 0h620l54 60v158H86L35 158Z" fill="#0b1428" stroke="url(#n)" stroke-width="3"/>
+    <path d="M35 0h620l54 60H86Z" fill="#243756" opacity=".82"/>
+    <path d="M86 60h623v158H86Z" fill="#101a2f" stroke="rgba(255,255,255,.12)"/>
+    <g transform="translate(124 92)">
+      <rect x="0" y="0" width="48" height="38" rx="7" fill="#050914" stroke="#40516f"/><circle cx="10" cy="30" r="4" fill="#b8ff2c"/><rect x="62" y="0" width="48" height="38" rx="7" fill="#050914" stroke="#40516f"/><circle cx="72" cy="30" r="4" fill="#b8ff2c"/><rect x="124" y="0" width="48" height="38" rx="7" fill="#050914" stroke="#40516f"/><circle cx="134" cy="30" r="4" fill="#b8ff2c"/><rect x="186" y="0" width="48" height="38" rx="7" fill="#050914" stroke="#40516f"/><circle cx="196" cy="30" r="4" fill="#b8ff2c"/><rect x="248" y="0" width="48" height="38" rx="7" fill="#050914" stroke="#40516f"/><circle cx="258" cy="30" r="4" fill="#b8ff2c"/><rect x="310" y="0" width="48" height="38" rx="7" fill="#050914" stroke="#40516f"/><circle cx="320" cy="30" r="4" fill="#b8ff2c"/><rect x="0" y="52" width="48" height="38" rx="7" fill="#050914" stroke="#40516f"/><circle cx="10" cy="82" r="4" fill="#b8ff2c"/><rect x="62" y="52" width="48" height="38" rx="7" fill="#050914" stroke="#40516f"/><circle cx="72" cy="82" r="4" fill="#b8ff2c"/><rect x="124" y="52" width="48" height="38" rx="7" fill="#050914" stroke="#40516f"/><circle cx="134" cy="82" r="4" fill="#b8ff2c"/><rect x="186" y="52" width="48" height="38" rx="7" fill="#050914" stroke="#40516f"/><circle cx="196" cy="82" r="4" fill="#b8ff2c"/><rect x="248" y="52" width="48" height="38" rx="7" fill="#050914" stroke="#40516f"/><circle cx="258" cy="82" r="4" fill="#b8ff2c"/><rect x="310" y="52" width="48" height="38" rx="7" fill="#050914" stroke="#40516f"/><circle cx="320" cy="82" r="4" fill="#b8ff2c"/>
+    </g>
+    <g transform="translate(540 92)">
+      <circle cx="22" cy="22" r="18" fill="url(#n)" opacity=".55"/><circle cx="72" cy="22" r="18" fill="url(#n)" opacity=".55"/><circle cx="22" cy="74" r="18" fill="url(#n)" opacity=".55"/><circle cx="72" cy="74" r="18" fill="url(#n)" opacity=".55"/>
+      <rect x="124" y="8" width="38" height="14" rx="4" fill="#050914" stroke="#67e8f9"/><circle cx="144" cy="58" r="13" fill="none" stroke="#b8ff2c" stroke-width="4"/>
+    </g>
+    <text x="124" y="42" fill="#eef6ff" font-size="28" font-family="Arial,sans-serif" font-weight="800">СЕРВЕР-ДОМ R2U PRO</text>
+  </g>
+  <path d="M120 145C260 70 390 190 530 120S725 78 820 160" fill="none" stroke="url(#n)" stroke-width="5" opacity=".7"/>
+</svg>
